@@ -186,7 +186,7 @@ class _ChatScreenState extends State<ChatScreen> {
                               fontSize: 15,
                             ),
                           ),
-                        )
+                        ),
                       ]),
                     ),
                   )

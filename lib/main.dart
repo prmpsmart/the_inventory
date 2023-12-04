@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:the_inventory/screens/chat.dart';
+
+import 'screens/choose.dart';
 
 void main() {
   runApp(const MainApp());
@@ -15,7 +16,7 @@ class MainApp extends StatelessWidget {
       designSize: const Size(375, 812),
       builder: (context, _) {
         return const MaterialApp(
-          home: ChatScreen(),
+          home: FirstPage(),
         );
       },
     );
