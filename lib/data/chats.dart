@@ -18,7 +18,7 @@ List<Chat> chats = [
     'Hello, Babatoye. Good day.',
   ),
   Chat(
-    false,
+    true,
     'Good day, James',
   ),
   Chat(
@@ -26,7 +26,7 @@ List<Chat> chats = [
     'I hope you’re good? Can we schedule a quick meeting?',
   ),
   Chat(
-    false,
+    true,
     'Sure, what time?',
   ),
   Chat(
@@ -34,7 +34,7 @@ List<Chat> chats = [
     'Looking forward to meeting you.',
   ),
   Chat(
-    false,
+    true,
     'Alright, Thanks!',
   ),
 ];

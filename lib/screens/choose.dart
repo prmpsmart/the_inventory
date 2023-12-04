@@ -119,15 +119,12 @@ class _FirstPageState extends State<FirstPage> {
               BlueButton(
                 text: 'Next',
                 width: 1.sw,
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) =>
-                          FormScreen(isStore: selected == 's'),
-                    ),
-                  );
-                },
+                onPressed: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => FormScreen(isStore: selected == 's'),
+                  ),
+                ),
               ),
               10.verticalSpace,
               RichText(

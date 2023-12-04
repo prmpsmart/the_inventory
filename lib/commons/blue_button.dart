@@ -5,9 +5,13 @@ class BlueButton extends StatelessWidget {
   final String text;
   final void Function() onPressed;
   final double width;
+  final double height;
+  final double fontSize;
   const BlueButton({
     super.key,
-    required this.width,
+    this.width = 1,
+    this.height = 48,
+    this.fontSize = 15,
     required this.text,
     required this.onPressed,
   });
@@ -17,7 +21,7 @@ class BlueButton extends StatelessWidget {
     return MaterialButton(
       onPressed: onPressed,
       minWidth: width,
-      height: 48.h,
+      height: height.h,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(10.r),
       ),
@@ -26,7 +30,7 @@ class BlueButton extends StatelessWidget {
         text,
         style: TextStyle(
           color: Colors.white,
-          fontSize: 15.spMin,
+          fontSize: fontSize.spMin,
         ),
       ),
     );

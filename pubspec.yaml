@@ -21,6 +21,7 @@ flutter:
 
   assets:
     - assets/
+    - assets/store/
 
   # fonts:
   #   - family: LibreFranklin
