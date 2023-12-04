@@ -98,38 +98,40 @@ class Overview extends StatelessWidget {
                           fontWeight: FontWeight.w600,
                         ),
                       ),
-                      SizedBox(
+                      Container(
                         width: 120.w,
-                        child: DropdownButtonFormField<String>(
-                          decoration: const InputDecoration(
-                            border: OutlineInputBorder(
-                              borderRadius: BorderRadius.all(
-                                Radius.circular(10),
+                        padding: const EdgeInsets.symmetric(horizontal: 10),
+                        decoration: BoxDecoration(
+                          border: Border.all(width: .3),
+                          borderRadius: const BorderRadius.all(
+                            Radius.circular(10),
+                          ),
+                        ),
+                        child: DropdownButtonHideUnderline(
+                          child: DropdownButton<String>(
+                            isDense: false,
+                            value: 'Today',
+                            style: TextStyle(
+                              fontSize: 14.spMax,
+                              fontWeight: FontWeight.w500,
+                              color: Colors.black.withOpacity(.6),
+                            ),
+                            items: const [
+                              DropdownMenuItem<String>(
+                                value: 'Today',
+                                child: Text('Today'),
                               ),
-                              gapPadding: 0,
-                            ),
+                              DropdownMenuItem<String>(
+                                value: 'Yesterday',
+                                child: Text('Yesterday'),
+                              ),
+                              DropdownMenuItem<String>(
+                                value: 'Tomorrow',
+                                child: Text('Tomorrow'),
+                              ),
+                            ],
+                            onChanged: (value) {},
                           ),
-                          value: 'Today',
-                          style: TextStyle(
-                            fontSize: 14.spMax,
-                            fontWeight: FontWeight.w500,
-                            color: Colors.black.withOpacity(.6),
-                          ),
-                          items: const [
-                            DropdownMenuItem<String>(
-                              value: 'Today',
-                              child: Text('Today'),
-                            ),
-                            DropdownMenuItem<String>(
-                              value: 'Yesterday',
-                              child: Text('Yesterday'),
-                            ),
-                            DropdownMenuItem<String>(
-                              value: 'Tomorrow',
-                              child: Text('Tomorrow'),
-                            ),
-                          ],
-                          onChanged: (value) {},
                         ),
                       ),
                     ],
@@ -169,6 +171,89 @@ class Overview extends StatelessWidget {
                   const Recent(),
                   const Recent(),
                   const Recent(),
+                  40.verticalSpace,
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'Top Sellers',
+                        style: TextStyle(
+                          fontSize: 16.spMax,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                      Container(
+                        width: 120.w,
+                        padding: const EdgeInsets.symmetric(horizontal: 10),
+                        decoration: BoxDecoration(
+                          border: Border.all(width: .3),
+                          borderRadius: const BorderRadius.all(
+                            Radius.circular(10),
+                          ),
+                        ),
+                        child: DropdownButtonHideUnderline(
+                          child: DropdownButton<String>(
+                            isDense: false,
+                            value: 'Today',
+                            style: TextStyle(
+                              fontSize: 14.spMax,
+                              fontWeight: FontWeight.w500,
+                              color: Colors.black.withOpacity(.6),
+                            ),
+                            items: const [
+                              DropdownMenuItem<String>(
+                                value: 'Today',
+                                child: Text('Today'),
+                              ),
+                              DropdownMenuItem<String>(
+                                value: 'Yesterday',
+                                child: Text('Yesterday'),
+                              ),
+                              DropdownMenuItem<String>(
+                                value: 'Tomorrow',
+                                child: Text('Tomorrow'),
+                              ),
+                            ],
+                            onChanged: (value) {},
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  30.verticalSpace,
+                  Text(
+                    'Store ranking',
+                    style: TextStyle(
+                      fontSize: 12.spMax,
+                      color: const Color(0xff5A5C6C),
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Image.asset(
+                        'assets/store/coc.jpg',
+                        height: .24.sw,
+                        width: .23.sw,
+                      ),
+                      Image.asset(
+                        'assets/store/coc.jpg',
+                        height: .24.sw,
+                        width: .23.sw,
+                      ),
+                      Image.asset(
+                        'assets/store/coc.jpg',
+                        height: .24.sw,
+                        width: .23.sw,
+                      ),
+                      Image.asset(
+                        'assets/store/coc.jpg',
+                        height: .24.sw,
+                        width: .23.sw,
+                      ),
+                    ],
+                  )
                 ],
               ),
             ),
