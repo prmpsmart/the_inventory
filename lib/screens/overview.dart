@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../commons/recent.dart';
+import '../commons/summary.dart';
 import '../data/user.dart';
 
 class Overview extends StatelessWidget {
@@ -84,6 +86,7 @@ class Overview extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(10),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -131,49 +134,41 @@ class Overview extends StatelessWidget {
                       ),
                     ],
                   ),
-                  Row(
+                  20.verticalSpace,
+                  const Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Container(
-                        padding: const EdgeInsets.all(10),
-                        decoration: BoxDecoration(
-                          color: const Color(0xff040614),
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            const Text(
-                              'Total',
-                              style: TextStyle(
-                                color: Colors.white,
-                              ),
-                            ),
-                            const Text(
-                              'Expenses',
-                              style: TextStyle(
-                                color: Colors.white,
-                              ),
-                            ),
-                            Row(
-                              children: [
-                                const Icon(
-                                  Icons.trending_up,
-                                  color: Colors.white,
-                                ),
-                                10.horizontalSpace,
-                                const Text(
-                                  '₦ 3,000',
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                  ),
-                                ),
-                              ],
-                            )
-                          ],
-                        ),
-                      )
+                      Summary(
+                        title: 'Total',
+                        subtitle: 'Expenses',
+                        color: Color(0xff040614),
+                        price: '3,000',
+                      ),
+                      Summary(
+                        title: 'Total Stock',
+                        subtitle: 'Expenses',
+                        color: Color(0xff0F8152),
+                        price: '8,200',
+                      ),
+                      Summary(
+                        title: 'Total',
+                        subtitle: 'Expenses',
+                        color: Color(0xff103EEE),
+                        price: '10,000',
+                      ),
                     ],
-                  )
+                  ),
+                  30.verticalSpace,
+                  Text(
+                    'Recent Activities',
+                    style: TextStyle(
+                      fontSize: 16.spMax,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  const Recent(),
+                  const Recent(),
+                  const Recent(),
                 ],
               ),
             ),
