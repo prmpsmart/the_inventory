@@ -1,4 +1,4 @@
-package com.example.the_inventory
+package com.prmpsmart.the_inventory
 
 import io.flutter.embedding.android.FlutterActivity
 
