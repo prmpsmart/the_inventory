@@ -7,7 +7,7 @@ class Recent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 200,
+      // height: 200,
       margin: const EdgeInsets.symmetric(vertical: 5),
       child: Row(
         children: [
@@ -32,6 +32,7 @@ class Recent extends StatelessWidget {
           15.horizontalSpace,
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
                 'Quantity addition (+20) to “Fanta”',
@@ -40,6 +41,7 @@ class Recent extends StatelessWidget {
                   fontSize: 14.spMax,
                 ),
               ),
+              5.verticalSpace,
               Text(
                 'by Caxri',
                 style: TextStyle(
@@ -47,6 +49,7 @@ class Recent extends StatelessWidget {
                   fontSize: 12.spMax,
                 ),
               ),
+              10.verticalSpace,
               Row(
                 children: [
                   Text(
